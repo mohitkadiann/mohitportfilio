@@ -34,15 +34,15 @@ export default function ProjectsSection() {
   const icons = [Code, Book, Database];
   return (
     <section className="bg-[#eee] text-black p-4 rounded-md shadow-md mt-8"> {/* Changed background to lighter off-white */}
-      <h2 className="font-playfair text-2xl md:text-3xl text-primary mb-3">Projects</h2>
+      <h2 className="font-playfair text-2xl md:text-3xl text-black mb-3">Projects</h2>
       <div className="flex flex-col gap-6">
         {projects.map((proj, i) => {
           const Icon = icons[i % icons.length];
           return (
             <div key={proj.title} className="bg-card rounded-xl px-6 py-5 shadow flex flex-col md:flex-row items-start gap-5 animate-fade-in">
-              <Icon className="text-primary mt-1 mx-2 min-w-9" size={36} />
+              <Icon className="text-black mt-1 mx-2 min-w-9" size={36} />
               <div>
-                <h3 className="font-semibold text-lg text-gray-900 mb-1">{proj.title} <span className="text-xs text-primary/80 font-normal">({proj.date})</span></h3>
+                <h3 className="font-semibold text-lg text-gray-900 mb-1">{proj.title} <span className="text-xs text-black/80 font-normal">({proj.date})</span></h3>
                 <ul className="list-disc ml-4 text-gray-800 text-sm mb-1">
                   {proj.description.map((desc, j) => <li key={j}>{desc}</li>)}
                 </ul>

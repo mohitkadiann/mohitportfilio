@@ -24,7 +24,7 @@ const interests = [
 export default function SkillsSection() {
   return (
     <section className="bg-[#eee] text-black p-4 rounded-md shadow-md">
-      <h2 className="font-playfair text-2xl md:text-3xl text-primary mt-4 mb-3">Skills & Interests</h2>
+      <h2 className="font-playfair text-2xl md:text-3xl text-black mt-4 mb-3">Skills & Interests</h2>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
         {skills.map(({ name, icon: Icon }) => (
           <div key={name} className={`${skillBgColor} rounded-lg px-3 py-4 flex flex-col items-center shadow-md hover-scale transition-all`}>
@@ -34,10 +34,10 @@ export default function SkillsSection() {
         ))}
       </div>
       <div className="mb-2">
-        <span className="font-medium">Soft Skills:</span> Effective problem-solving, Teamwork, Project management, Analytical skills, Time management
+        <span className="font-medium text-black">Soft Skills:</span> Effective problem-solving, Teamwork, Project management, Analytical skills, Time management
       </div>
       <div className="mb-2">
-        <span className="font-medium">Area of Interest:</span> {interests.join(", ")}
+        <span className="font-medium text-black">Area of Interest:</span> {interests.join(", ")}
       </div>
     </section>
   );

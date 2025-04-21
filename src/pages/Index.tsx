@@ -8,7 +8,7 @@ import ContactSection from "../components/ContactSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-full bg-white text-gray-900">
+    <div className="min-h-screen w-full bg-white text-black">
       <nav className="w-full sticky top-0 z-10 bg-[#f3f3f3] backdrop-blur-md px-6 py-3 flex items-center justify-between shadow">
         <span className="text-xl font-playfair font-bold tracking-wide text-black">Mohit</span>
         <span className="text-sm text-black/80 font-playfair">Portfolio</span>

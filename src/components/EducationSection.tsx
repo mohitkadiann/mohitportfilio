@@ -28,14 +28,14 @@ const education = [
 export default function EducationSection() {
   return (
     <section className="bg-[#eee] text-black p-4 rounded-md shadow-md mt-8"> {/* Changed background to lighter off-white */}
-      <h2 className="font-playfair text-2xl md:text-3xl text-primary mb-3">Education</h2>
+      <h2 className="font-playfair text-2xl md:text-3xl text-black mb-3">Education</h2>
       <div className="flex flex-col gap-5">
         {education.map((edu, i) => (
           <div key={i} className="bg-card rounded-xl px-6 py-4 shadow flex items-start gap-5 animate-fade-in">
-            <GraduationCap className="text-primary mt-1" size={28} />
+            <GraduationCap className="text-black mt-1" size={28} />
             <div>
               <div className="font-bold text-lg text-gray-900">{edu.school}</div>
-              <div className="text-sm text-gray-800">{edu.degree}{edu.details && <> — <span className="font-medium text-primary">{edu.details}</span></>}</div>
+              <div className="text-sm text-gray-800">{edu.degree}{edu.details && <> — <span className="font-medium text-black">{edu.details}</span></>}</div>
               <div className="text-xs text-gray-600">{edu.location}, {edu.period}</div>
             </div>
           </div>
