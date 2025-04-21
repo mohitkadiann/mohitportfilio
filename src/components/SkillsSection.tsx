@@ -20,7 +20,7 @@ const interests = [
 
 export default function SkillsSection() {
   return (
-    <section className="bg-white/90 text-black p-4 rounded-md shadow-md"> {/* Changed background to off-white and text to black */}
+    <section className="bg-[#eee] text-black p-4 rounded-md shadow-md"> {/* Changed background to lighter off-white */}
       <h2 className="font-playfair text-2xl md:text-3xl text-primary mt-4 mb-3">Skills & Interests</h2>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
         {skills.map(({ name, icon: Icon }) => (

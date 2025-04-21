@@ -3,7 +3,7 @@ import { Award, Star } from "lucide-react";
 
 export default function AchievementsSection() {
   return (
-    <section className="bg-white/90 text-black p-4 rounded-md shadow-md mt-8">
+    <section className="bg-[#eee] text-black p-4 rounded-md shadow-md mt-8"> {/* Changed background to lighter off-white */}
       <h2 className="font-playfair text-2xl md:text-3xl text-primary mb-3">Achievements</h2>
       <div className="bg-secondary rounded-xl px-6 py-4 shadow mb-5 animate-fade-in">
         <div className="flex items-center gap-3 mb-1">

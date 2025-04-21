@@ -33,7 +33,7 @@ const projects = [
 export default function ProjectsSection() {
   const icons = [Code, Book, Database];
   return (
-    <section className="bg-white/90 text-black p-4 rounded-md shadow-md mt-8">
+    <section className="bg-[#eee] text-black p-4 rounded-md shadow-md mt-8"> {/* Changed background to lighter off-white */}
       <h2 className="font-playfair text-2xl md:text-3xl text-primary mb-3">Projects</h2>
       <div className="flex flex-col gap-6">
         {projects.map((proj, i) => {
