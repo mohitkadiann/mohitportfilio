@@ -27,8 +27,8 @@ const education = [
 
 export default function EducationSection() {
   return (
-    <section>
-      <h2 className="font-playfair text-2xl md:text-3xl text-primary mb-3 mt-8">Education</h2>
+    <section className="bg-white/90 text-black p-4 rounded-md shadow-md mt-8">
+      <h2 className="font-playfair text-2xl md:text-3xl text-primary mb-3">Education</h2>
       <div className="flex flex-col gap-5">
         {education.map((edu, i) => (
           <div key={i} className="bg-card rounded-xl px-6 py-4 shadow flex items-start gap-5 animate-fade-in">

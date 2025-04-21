@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <section className="mt-8 mb-6">
+    <section className="bg-white/90 text-black p-4 rounded-md shadow-md mt-8">
       <h2 className="font-playfair text-2xl md:text-3xl text-primary mb-3">Contact</h2>
       <div className="bg-secondary rounded-xl px-6 py-5 shadow flex flex-col md:flex-row items-center gap-4 animate-fade-in">
         <div className="flex items-center gap-2 text-gray-900">
