@@ -28,8 +28,8 @@ export default function SkillsSection() {
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
         {skills.map(({ name, icon: Icon }) => (
           <div key={name} className={`${skillBgColor} rounded-lg px-3 py-4 flex flex-col items-center shadow-md hover-scale transition-all`}>
-            <Icon className="text-primary mb-1" size={28} />
-            <span className="font-medium text-xs md:text-sm">{name}</span>
+            <Icon className="text-black mb-1" size={28} />
+            <span className="font-medium text-xs md:text-sm text-black">{name}</span>
           </div>
         ))}
       </div>
