@@ -1,5 +1,4 @@
-
-import { Code, Book, Database } from "lucide-react";
+import { Book, Database, Code } from "lucide-react";
 
 const projects = [
   {
@@ -33,25 +32,50 @@ const projects = [
 export default function ProjectsSection() {
   const icons = [Code, Book, Database];
   return (
-    <section className="bg-[#eee] text-black p-4 rounded-md shadow-md mt-8"> {/* Changed background to lighter off-white */}
+    <section className="bg-[#eee] text-black p-4 rounded-md shadow-md mt-8">
       <h2 className="font-playfair text-2xl md:text-3xl text-black mb-3">Projects</h2>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-8">
         {projects.map((proj, i) => {
           const Icon = icons[i % icons.length];
           return (
-            <div key={proj.title} className="bg-card rounded-xl px-6 py-5 shadow flex flex-col md:flex-row items-start gap-5 animate-fade-in">
-              <Icon className="text-black mt-1 mx-2 min-w-9" size={36} />
+            <div
+              key={proj.title}
+              className={`
+                transition-all duration-300 ease-out
+                bg-gradient-to-tr from-[#f7f3ff] via-[#f3f2f7] to-[#ffdfe2]
+                border border-gray-200
+                rounded-2xl shadow-xl
+                px-8 py-6
+                flex flex-col md:flex-row items-start gap-6
+                hover:scale-[1.025] hover:shadow-2xl hover:border-black/20
+                hover:-translate-y-1 hover:bg-gradient-to-br
+                animate-fade-in
+              `}
+              style={{
+                backgroundBlendMode: 'lighten'
+              }}
+            >
+              <div className="flex-shrink-0 bg-white/80 rounded-full shadow p-3 mb-2 md:mb-0">
+                <Icon className="text-black" size={36} />
+              </div>
               <div>
-                <h3 className="font-semibold text-lg text-gray-900 mb-1">{proj.title} <span className="text-xs text-black/80 font-normal">({proj.date})</span></h3>
-                <ul className="list-disc ml-4 text-gray-800 text-sm mb-1">
-                  {proj.description.map((desc, j) => <li key={j}>{desc}</li>)}
+                <h3 className="font-semibold text-lg text-black mb-1">
+                  {proj.title}
+                  <span className="text-xs text-black/70 font-normal ml-2">({proj.date})</span>
+                </h3>
+                <ul className="list-disc ml-6 text-black text-[15px] font-inter mb-2 space-y-1">
+                  {proj.description.map((desc, j) => (
+                    <li key={j}>{desc}</li>
+                  ))}
                 </ul>
-                <div className="text-xs text-gray-600"><b>Tech:</b> {proj.tech}</div>
+                <div className="mt-2 px-3 py-1 bg-[#ededfa]/90 border border-[#e0e0e4] rounded font-medium text-xs text-black inline-block shadow-sm">
+                  <b>Tech:</b> {proj.tech}
+                </div>
               </div>
             </div>
           )
         })}
       </div>
     </section>
-  )
+  );
 }
