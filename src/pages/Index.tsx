@@ -6,11 +6,9 @@ import AchievementsSection from "../components/AchievementsSection";
 import EducationSection from "../components/EducationSection";
 import ContactSection from "../components/ContactSection";
 
-const gradient = "linear-gradient(90deg, #FFDEE2 0%, #FDE1D3 100%)";
-
 const Index = () => {
   return (
-    <div style={{ background: gradient}} className="min-h-screen w-full">
+    <div className="min-h-screen w-full bg-white">
       <nav className="w-full sticky top-0 z-10 bg-[#ffdee27a] backdrop-blur-md px-6 py-3 flex items-center justify-between shadow">
         <span className="text-xl font-playfair font-bold tracking-wide text-primary">Mohit</span>
         <span className="text-sm text-primary/80 font-playfair">Portfolio</span>
@@ -31,3 +29,4 @@ const Index = () => {
 };
 
 export default Index;
+
