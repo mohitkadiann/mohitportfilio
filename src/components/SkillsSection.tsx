@@ -1,6 +1,17 @@
 
 import { Code, Book, Database, Users, Settings, Languages } from "lucide-react";
 
+// Colors to cycle through for skill cards background
+const skillBgColors = [
+  "bg-[#F1F0FB]", // Soft Gray
+  "bg-[#D3E4FD]", // Soft Blue
+  "bg-[#FDE1D3]", // Soft Peach
+  "bg-[#FFDEE2]", // Soft Pink
+  "bg-[#E5DEFF]", // Soft Purple
+  "bg-[#FEF7CD]", // Soft Yellow
+  "bg-[#F2FCE2]", // Soft Green
+];
+
 const skills = [
   { name: "C++", icon: Code },
   { name: "Java", icon: Code },
@@ -20,15 +31,18 @@ const interests = [
 
 export default function SkillsSection() {
   return (
-    <section className="bg-[#eee] text-black p-4 rounded-md shadow-md"> {/* Changed background to lighter off-white */}
+    <section className="bg-[#eee] text-black p-4 rounded-md shadow-md">
       <h2 className="font-playfair text-2xl md:text-3xl text-primary mt-4 mb-3">Skills & Interests</h2>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
-        {skills.map(({ name, icon: Icon }) => (
-          <div key={name} className="bg-secondary rounded-lg px-3 py-4 flex flex-col items-center shadow-md hover-scale transition-all">
-            <Icon className="text-primary mb-1" size={28} />
-            <span className="font-medium text-xs md:text-sm">{name}</span>
-          </div>
-        ))}
+        {skills.map(({ name, icon: Icon }, index) => {
+          const bgColorClass = skillBgColors[index % skillBgColors.length];
+          return (
+            <div key={name} className={`${bgColorClass} rounded-lg px-3 py-4 flex flex-col items-center shadow-md hover-scale transition-all`}>
+              <Icon className="text-primary mb-1" size={28} />
+              <span className="font-medium text-xs md:text-sm">{name}</span>
+            </div>
+          );
+        })}
       </div>
       <div className="mb-2">
         <span className="font-medium">Soft Skills:</span> Effective problem-solving, Teamwork, Project management, Analytical skills, Time management
