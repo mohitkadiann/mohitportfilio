@@ -10,11 +10,7 @@ const links = {
 export default function ProfileHero() {
   return (
     <section className="flex flex-col md:flex-row items-center justify-center pt-10 pb-8 md:pb-14">
-      <img
-        src="/lovable-uploads/aadd1917-b30f-4b04-9dba-aa288fb18fe1.png"
-        alt="Mohit photo or logo"
-        className="w-32 h-32 rounded-full border-4 border-primary mb-6 md:mb-0 md:mr-10 object-cover shadow-lg"
-      />
+      {/* Removed the img element to not show the picture */}
       <div className="text-center md:text-left max-w-lg animate-fade-in">
         <h1 className="text-4xl md:text-5xl font-playfair font-bold tracking-tight text-primary mb-2">Mohit</h1>
         <h2 className="text-xl md:text-2xl font-inter font-semibold text-gray-800 mb-1">B.Tech CSE, 3rd Year Student</h2>
